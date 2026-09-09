@@ -1,10 +1,3 @@
-<!--
-  ============================================================================
-   GENERATED FILE - DO NOT EDIT
-   Built by scripts/build.mjs from README.template.md.
-   Edit the template. This file is overwritten by .github/workflows/build.yml.
-  ============================================================================
--->
 <div align="center">
 
 <img src="./assets/header.svg" width="100%" alt="NIKHILESH — CTO @ Scribur :: AI // full-stack"/>
@@ -50,27 +43,10 @@ daily:       "neovim + tmux + ghostty + claude code"
 
 <div align="center"><img src="./assets/divider.svg" width="100%" alt=""/></div>
 
-<!-- STATS:START -->
-```
-public repos .....         14    languages ........         11
-total stars ......          2    forks of my work .          0
-member since .....       2021    last push ........ 2026-09-09
-
-python        █████████████░░░░░░░░░░░░░░░░░░░░░░░░░  33.2%
-typescript    ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  22.0%
-javascript    ███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  19.3%
-swift         █████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  13.6%
-html          ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   5.9%
-css           ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   5.6%
-```
-<!-- STATS:END -->
-
 <div align="center">
 
 <img width="100%" src="https://raw.githubusercontent.com/NikhileshThiru/NikhileshThiru/output/snake.svg" alt="contribution snake"/>
 
 <img src="./assets/divider.svg" width="100%" alt=""/>
-
-<sub>stats regenerate every 6 hours · <a href="https://github.com/NikhileshThiru/NikhileshThiru/blob/main/.github/workflows/build.yml">build.yml</a> · <a href="https://github.com/NikhileshThiru/NikhileshThiru/blob/main/README.template.md">README.template.md</a></sub>
 
 </div>
