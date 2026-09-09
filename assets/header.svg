@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="240" viewBox="0 0 900 240" role="img" aria-labelledby="t d" preserveAspectRatio="xMidYMid meet"
+     font-family="ui-monospace, SFMono-Regular, &apos;SF Mono&apos;, Menlo, Consolas, &apos;Liberation Mono&apos;, &apos;DejaVu Sans Mono&apos;, monospace">
+  <title id="t">NIKHILESH</title>
+  <desc id="d">CTO at Scribur. AI and full-stack engineering. Atlanta, GA. Georgia Tech class of 2028.</desc>
+
+  <!--
+    Self-contained banner. Constraints it is built to survive:
+      - GitHub loads this through camo as an <img>, so scripting is inert and external fonts never load.
+      - SMIL is the only animation that runs; CSS keyframes are avoided for the same reason.
+      - The dark plate is painted here, not inherited, so it reads in light and dark themes.
+      - Wordmark and subtitle use textLength so the layout is identical whichever monospace
+        face the viewer's OS resolves.
+  -->
+
+  <defs>
+    <linearGradient id="plate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.55" stop-color="#0a0c12"/>
+      <stop offset="1" stop-color="#08090d"/>
+    </linearGradient>
+
+    <radialGradient id="halo" cx="0.5" cy="0.46" r="0.62">
+      <stop offset="0" stop-color="#39D0D8" stop-opacity="0.20"/>
+      <stop offset="0.45" stop-color="#58A6FF" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#08090d" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.78">
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.55"/>
+    </radialGradient>
+
+    <!-- Narrow band of light that travels across the wordmark, used as a mask. -->
+    <linearGradient id="sweepBand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000000"/>
+      <stop offset="0.38" stop-color="#000000"/>
+      <stop offset="0.50" stop-color="#ffffff"/>
+      <stop offset="0.62" stop-color="#000000"/>
+      <stop offset="1" stop-color="#000000"/>
+    </linearGradient>
+
+    <mask id="sweepMask" maskUnits="userSpaceOnUse" x="0" y="0" width="900" height="240">
+      <rect x="0" y="0" width="300" height="240" fill="url(#sweepBand)">
+        <animateTransform attributeName="transform" type="translate"
+                          values="-320 0; 960 0; 960 0" keyTimes="0; 0.42; 1"
+                          dur="5.2s" repeatCount="indefinite"/>
+      </rect>
+    </mask>
+
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F778BA" stop-opacity="0"/>
+      <stop offset="0.16" stop-color="#F778BA" stop-opacity="0.85"/>
+      <stop offset="0.50" stop-color="#7EE7FF" stop-opacity="0.95"/>
+      <stop offset="0.84" stop-color="#58A6FF" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#58A6FF" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="ruleHi" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <clipPath id="ruleClip">
+      <rect x="196" y="148" width="508" height="3" rx="1.5"/>
+    </clipPath>
+
+    <pattern id="scan" width="4" height="3" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="4" height="1" fill="#000000"/>
+    </pattern>
+
+    <filter id="glow" x="-25%" y="-60%" width="150%" height="220%">
+      <feGaussianBlur stdDeviation="4.5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glowHot" x="-25%" y="-60%" width="150%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="b"/>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glowSoft" x="-40%" y="-120%" width="180%" height="340%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+
+  <!-- plate -->
+  <rect x="0" y="0" width="900" height="240" fill="url(#plate)"/>
+  <rect x="0" y="0" width="900" height="240" fill="url(#halo)"/>
+
+  <!-- wordmark: base pass -->
+  <text x="450" y="126" text-anchor="middle" textLength="520" lengthAdjust="spacing"
+        font-size="64" font-weight="700" fill="#f2f6fc" filter="url(#glow)">NIKHILESH</text>
+
+  <!-- wordmark: cyan pass, revealed only through the travelling band -->
+  <g mask="url(#sweepMask)">
+    <text x="450" y="126" text-anchor="middle" textLength="520" lengthAdjust="spacing"
+          font-size="64" font-weight="700" fill="#CDF7FF" filter="url(#glowHot)">NIKHILESH</text>
+  </g>
+
+  <!-- gradient rule under the wordmark, with a highlight running left to right -->
+  <rect x="196" y="148" width="508" height="3" rx="1.5" fill="url(#rule)"/>
+  <g clip-path="url(#ruleClip)">
+    <rect x="0" y="148" width="150" height="3" fill="url(#ruleHi)" opacity="0.9">
+      <animateTransform attributeName="transform" type="translate"
+                        values="36 0; 720 0" dur="3.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- subtitle -->
+  <text x="257" y="180" textLength="386" lengthAdjust="spacing" xml:space="preserve"
+        font-size="15" filter="url(#glowSoft)"><tspan fill="#F0B72F">&gt;</tspan><tspan fill="#8FE9F5"> CTO @ SCRIBUR :: AI // FULL-STACK</tspan></text>
+  <rect x="648" y="167" width="9" height="16" fill="#7EE7FF">
+    <animate attributeName="opacity" values="1;0" keyTimes="0;0.5" dur="1.06s" calcMode="discrete" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- status rail -->
+  <text x="56" y="36" font-size="11" letter-spacing="1.6" fill="#7EE7FF" opacity="0.72">NIKHILESH.EXE</text>
+
+  <circle cx="746" cy="32" r="3.4" fill="#3FB950">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1.9s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="746" cy="32" r="3.4" fill="none" stroke="#3FB950" stroke-width="1">
+    <animate attributeName="r" values="3.4;9;3.4" dur="1.9s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-opacity" values="0.55;0;0.55" dur="1.9s" repeatCount="indefinite"/>
+  </circle>
+  <text x="844" y="36" text-anchor="end" textLength="84" lengthAdjust="spacing"
+        font-size="11" fill="#3FB950" opacity="0.85">SYS://ONLINE</text>
+
+  <text x="56" y="214" font-size="11" letter-spacing="1.6" fill="#8b949e" opacity="0.8">LOC: ATLANTA.GA</text>
+  <text x="844" y="214" text-anchor="end" font-size="11" letter-spacing="1.6" fill="#F778BA" opacity="0.8">BUILD//2028</text>
+
+  <!-- corner brackets -->
+  <g fill="none" stroke="#7EE7FF" stroke-width="2" stroke-linecap="square">
+    <animate attributeName="stroke-opacity" values="0.22;0.85;0.22" dur="2.8s" repeatCount="indefinite"/>
+    <path d="M16 40 L16 16 L40 16"/>
+    <path d="M860 16 L884 16 L884 40"/>
+    <path d="M884 200 L884 224 L860 224"/>
+    <path d="M40 224 L16 224 L16 200"/>
+  </g>
+
+  <!-- CRT overlays: drifting scanlines, then vignette -->
+  <g opacity="0.32">
+    <rect x="0" y="-9" width="900" height="258" fill="url(#scan)">
+      <animateTransform attributeName="transform" type="translate"
+                        values="0 0; 0 3" dur="2.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <rect x="0" y="0" width="900" height="240" fill="url(#vignette)"/>
+  <rect x="0.5" y="0.5" width="899" height="239" fill="none" stroke="#1c2530" stroke-width="1"/>
+</svg>

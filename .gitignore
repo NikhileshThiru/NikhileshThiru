@@ -1,0 +1,6 @@
+# The build brief is local reference only, it does not belong on the public profile.
+BRIEF.md
+
+node_modules/
+dist/
+.DS_Store

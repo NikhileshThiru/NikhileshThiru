@@ -1,0 +1,35 @@
+name: snake
+
+# Renders the contribution graph as a snake game and publishes it to the `output` branch.
+# ghaction-github-pages pushes the *contents* of build_dir to the branch root, so the file
+# lands at output/snake.svg, which is what README.template.md points at.
+
+on:
+  schedule:
+    - cron: '43 */12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: snake
+  cancel-in-progress: true
+
+jobs:
+  snake:
+    runs-on: ubuntu-latest
+    steps:
+      - name: generate snake.svg
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: dist/snake.svg?palette=github-dark&color_snake=%23F778BA
+
+      - name: publish to the output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
