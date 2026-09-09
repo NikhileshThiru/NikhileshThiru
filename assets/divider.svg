@@ -10,15 +10,15 @@
 
   <defs>
     <linearGradient id="flow" gradientUnits="userSpaceOnUse" x1="-900" y1="0" x2="900" y2="0">
-      <stop offset="0" stop-color="#F778BA"/>
-      <stop offset="0.125" stop-color="#B57BD8"/>
+      <stop offset="0" stop-color="#8957E5"/>
+      <stop offset="0.125" stop-color="#A371F7"/>
       <stop offset="0.25" stop-color="#58A6FF"/>
       <stop offset="0.375" stop-color="#7EE7FF"/>
-      <stop offset="0.5" stop-color="#F778BA"/>
-      <stop offset="0.625" stop-color="#B57BD8"/>
+      <stop offset="0.5" stop-color="#8957E5"/>
+      <stop offset="0.625" stop-color="#A371F7"/>
       <stop offset="0.75" stop-color="#58A6FF"/>
       <stop offset="0.875" stop-color="#7EE7FF"/>
-      <stop offset="1" stop-color="#F778BA"/>
+      <stop offset="1" stop-color="#8957E5"/>
       <animateTransform attributeName="gradientTransform" type="translate"
                         from="0 0" to="900 0" dur="7s" repeatCount="indefinite"/>
     </linearGradient>
