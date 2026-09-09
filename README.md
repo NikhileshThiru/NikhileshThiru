@@ -14,15 +14,13 @@
 role:        Co-founder & CTO @ Scribur
 focus:       [ AI systems, full-stack product, developer tooling ]
 location:    Atlanta, GA
-education:
-  school:    Georgia Institute of Technology
-  degree:    B.S. Computer Science
-  threads:   [ Intelligence, Internetworks ]
-  grad:      2028
+school:      Georgia Institute of Technology
+degree:      B.S. Computer Science
+threads:     [ Intelligence, Internetworks ]
+grad:        "2028"
 highlight:   2nd overall out of 300+ teams at HackGT 12 — RefNet
 shipping:    Scribur — an operating system for in-house UGC teams.
              React · Supabase · Kimi K2 · Apify. Delaware C Corp, platform live.
-background:  25+ client sites shipped · Roblox game dev
 ml:          "pandas, pytorch, openai + anthropic APIs"
 daily:       "neovim + tmux + ghostty + claude code"
 ```
