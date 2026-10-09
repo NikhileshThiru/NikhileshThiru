@@ -26,7 +26,10 @@ highlight:   back-to-back HackGT winner
              HackGT 13 — Best Use of Solana, built solo (Rescu)
 shipping:    Scribur — an operating system for in-house UGC teams.
              React · Supabase · Kimi K2 · Apify. Delaware C Corp, platform live.
-ml:          "pandas, pytorch, openai + anthropic APIs"
+homelab:     Clef — local AI decision engine on a 6 GB laptop GPU.
+             9B decision model, ~320 ms/decision, 200+ decisions a minute.
+             llama.cpp · FastAPI · SQLite · Three.js · systemd.
+ml:          "pytorch, pandas, llama.cpp on CUDA, openai + anthropic APIs"
 daily:       "neovim + tmux + ghostty + claude code"
              Omarchy / macOS  ·  github.com/NikhileshThiru/dotfiles
 ```
@@ -41,7 +44,7 @@ daily:       "neovim + tmux + ghostty + claude code"
 <br/>
 <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,threejs,d3,electron&theme=dark" alt="PyTorch, TensorFlow, Three.js, D3, Electron"/><img src="./assets/solana.svg" alt="Solana"/>
 <br/>
-<img src="https://skillicons.dev/icons?i=supabase,postgres,mongodb,redis,aws,firebase,docker,linux,arch,githubactions,vercel,neovim&theme=dark" alt="Supabase, Postgres, MongoDB, Redis, AWS, Firebase, Docker, Linux, Arch, GitHub Actions, Vercel, Neovim"/>
+<img src="https://skillicons.dev/icons?i=supabase,postgres,sqlite,mongodb,redis,aws,firebase,docker,linux,arch,githubactions,vercel,neovim&theme=dark" alt="Supabase, Postgres, SQLite, MongoDB, Redis, AWS, Firebase, Docker, Linux, Arch, GitHub Actions, Vercel, Neovim"/>
 
 </div>
 
